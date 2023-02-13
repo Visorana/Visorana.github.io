@@ -12,7 +12,7 @@
 <body>
     <header class="header">
         <div class="container header-wrap">
-            <a class="noemi-logo" href="#"><img src="svg/noemi-logo.svg" width="179px"></a>
+            <a class="noemi-logo" href="#"><img src="svg/noemi-logo.svg" width="179" alt="Логотип Noemi"></a>
             <nav>
                 <ul class="menu-list">
                     <li><a href="#" class="menu-list-item">Главная</a></li>
@@ -79,7 +79,7 @@
             </ul>
         </section>
         <div class="container">
-            <section class="articles">
+            <div class="articles">
                 <ul class="article-list">
                     <li>
                         <article class="article">
@@ -187,7 +187,7 @@
                         </article>
                     </li>
                 </ul>
-            </section>
+            </div>
             <aside class="sidebar">
                 <section class="sidebar-articles">
                     <h4 class="sidebar-articles-title">Новые посты</h4>
@@ -242,12 +242,12 @@
                         </li>
                     </ul>
                 </section>
-                <section class="search">
+                <div class="search">
                     <form class="search-form" action="">
                         <label><input class="search-field" type="search" placeholder="Найти..."></label>
                         <button class="search-button" type="submit"></button>
                     </form>
-                </section>
+                </div>
                 <section class="mailing">
                     <h4 class="mailing-title">Рассылка</h4>
                     <form class="mailing-form" action="">
@@ -340,17 +340,17 @@
             <ul class="container socials">
                 <li>
                     <a href="#" class="social_icon">
-                        <img src="svg/001-dribbble.svg" width="20px" alt="Dribbble">
+                        <img src="svg/001-dribbble.svg" width="20" alt="Dribbble">
                     </a>
                 </li>
                 <li>
                     <a href="#" class="social_icon">
-                        <img src="svg/002-pinterest.svg" width="20px" alt="Pinterest">
+                        <img src="svg/002-pinterest.svg" width="20" alt="Pinterest">
                     </a>
                 </li>
                 <li>
                     <a href="#" class="social_icon">
-                        <img src="svg/003-tumblr.svg" width="20px" alt="Tumblr">
+                        <img src="svg/003-tumblr.svg" width="20" alt="Tumblr">
                     </a>
                 </li>
             </ul>
@@ -364,7 +364,7 @@
                 <label for="popup-checkbox" class="popup-close"></label>
                 <form class="feedback" action="">
                     <h2 class="feedback-title">Ваш фидбек</h2>
-                    <label class="question question-1">
+                    <label class="question visit-question">
                         <span>Как часто вы заходите на сайт?</span>
                         <select class="question-field option-field">
                             <option class="feedback-option">Почти каждый день</option>
@@ -373,14 +373,14 @@
                             <option class="feedback-option">Несколько раз в год</option>
                         </select>
                     </label>
-                    <label class="question question-2">
+                    <div class="question mailing-question">
                         <span>Вы подписаны на e-mail рассылку?</span>
                         <div class="radio-wrap">
                             <label><input class="radio-choice" type="radio" name="mailing">Да</label>
                             <label><input class="radio-choice" type="radio" name="mailing">Нет</label>
                         </div>
-                    </label>
-                    <label class="question question-3">
+                    </div>
+                    <label class="question content-question">
                         <span>Расскажите, какой контент вы хотели бы видеть на нашем сайте?</span>
                         <textarea class="question-field content-question-field"
                                   placeholder="Может, больше рецептов?"></textarea>

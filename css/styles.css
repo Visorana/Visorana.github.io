@@ -50,9 +50,7 @@ body {
 
 .menu-list {
     display: flex;
-    justify-content: space-between;
     font-size: 13px;
-    width: 463px;
     padding-top: 14px;
     list-style-type: none;
 }
@@ -61,6 +59,7 @@ body {
     text-decoration: none;
     text-transform: uppercase;
     color: inherit;
+    margin-left: 34px;
 }
 
 .menu-list-item:hover {
@@ -201,12 +200,12 @@ h3 {
 
 .article-list {
     list-style-type: none;
-    margin-top: 64px;
+    margin-top: 63px;
 }
 
 .article {
     display: flex;
-    width: 780px;
+    width: 779px;
     margin-top: 60px;
 }
 
@@ -229,25 +228,24 @@ h3 {
 }
 
 .content-info {
-    display: flex;
     font-size: 12px;
-    line-height: 40px;
+    line-height: 20px;
     font-weight: 700;
-    margin-top: 7px;
+    margin-top: 27px;
 }
 
 .content-date {
     font-size: 12px;
     font-weight: 400;
     color: #888;
-    margin-right: 12px;
+    margin-right: 10px;
 }
 
 .content-text {
     font-size: 15px;
     line-height: 22px;
     color: #0f0d0e;
-    margin-top: 23px
+    margin-top: 43px
 }
 
 .sidebar {
@@ -268,6 +266,7 @@ h3 {
 .sidebar-article-list {
     list-style-type: none;
     margin-top: 24px;
+    margin-bottom: 61px
 }
 
 h4 {
@@ -290,11 +289,13 @@ h4:after {
 
 .sidebar-article {
     display: flex;
+    justify-content: space-between;
     margin-top: 15px;
 }
 
 .sidebar-article-img {
     height: 70px;
+    width: 70px;
     margin-top: 6px;
 }
 
@@ -307,12 +308,12 @@ h5 {
 }
 
 .sidebar-item-content {
-    margin-left: 19px;
+    width: 182px;
 }
 
 .search-form {
     display: flex;
-    margin-top: 61px
+    margin-bottom: 53px;
 }
 
 .search-field {
@@ -345,7 +346,7 @@ h5 {
 }
 
 .mailing {
-    margin-top: 53px;
+    margin-bottom: 51px;
 }
 
 .mailing-title {
@@ -385,7 +386,7 @@ h5 {
 }
 
 .sidebar-tags {
-    margin-top: 51px;
+    margin-bottom: 51px;
 }
 
 .sidebar-tags-title {
@@ -419,7 +420,7 @@ h5 {
 }
 
 .sidebar-topics {
-    margin-top: 51px;
+    margin-bottom: 51px;
 }
 
 .sidebar-topics-title {
@@ -466,6 +467,9 @@ h5 {
     width: 301px;
     height: 436px;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .product:before {
@@ -483,6 +487,7 @@ h5 {
 
 .product-image {
     height: 204px;
+    width: 300px;
 }
 
 .product-title {
@@ -492,8 +497,7 @@ h5 {
 
 .product-content {
     line-height: 22px;
-    position: relative;
-    margin-top: 17px;
+    height: 217px;
     z-index: 1;
 }
 
@@ -622,15 +626,15 @@ h5 {
     flex-direction: column;
 }
 
-.question-1 {
+.visit-question {
     margin-top: 20px;
 }
 
-.question-2 {
+.mailing-question {
     margin-top: 33px;
 }
 
-.question-3 {
+.content-question {
     margin-top: 31px;
 }
 
