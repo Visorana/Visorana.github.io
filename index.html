@@ -33,7 +33,8 @@
             <h2>Сейчас в тренде</h2>
             <ul class="trend-list">
                 <li>
-                    <article class="trend trend-1">
+                    <article class="trend">
+                        <img class="trend-image" src="images/trend1.jpg" alt="Растения">
                         <div class="trend-content">
                             <ul class="tags trends-tags">
                                 <li><a class="tags-item" href="#">Lifestyle</a></li>
@@ -44,7 +45,8 @@
                     </article>
                 </li>
                 <li>
-                    <article class="trend trend-2">
+                    <article class="trend">
+                        <img class="trend-image" src="images/trend2.jpg" alt="Разные виды сыров">
                         <div class="trend-content">
                             <ul class="tags trends-tags">
                                 <li><a class="tags-item" href="#">Food</a></li>
@@ -55,7 +57,8 @@
                     </article>
                 </li>
                 <li>
-                    <article class="trend trend-3">
+                    <article class="trend">
+                        <img class="trend-image" src="images/trend3.jpg" alt="Поход в горах">
                         <div class="trend-content">
                             <ul class="tags trends-tags">
                                 <li><a class="tags-item" href="#">Lifestyle</a></li>
@@ -66,7 +69,8 @@
                     </article>
                 </li>
                 <li>
-                    <article class="trend trend-4">
+                    <article class="trend">
+                        <img class="trend-image" src="images/trend4.jpg" alt="Лимоны в корзине">
                         <div class="trend-content">
                             <ul class="tags trends-tags">
                                 <li><a  class="tags-item" href="#">Food</a></li>
@@ -282,59 +286,57 @@
             </aside>
         </div>
     </main>
-    <aside class="container">
-        <section class="products">
-            <h2>Наши изделия</h2>
-            <ul class="product-list">
-                <li class="product">
-                    <img class="product-image" src="images/shop-item-desk1.jpg" alt="Подушка">
-                    <div class="product-content">
-                        <a class="product-title" href="#"><h3>Подушки на диван</h3></a>
-                        <p>Набор из двух подушек с модными принтами. Видео о создании <a class="product-content-link"
-                                                                                         href="#">здесь</a>.</p>
-                        <form class="product-form" action="">
-                            <div class="price">
-                                <del>1000 ₽</del>
-                                <p>800 ₽</p>
-                            </div>
-                            <button class="shop-button" type="submit">В магазин</button>
-                        </form>
+    <section class="container products">
+        <h2>Наши изделия</h2>
+        <ul class="product-list">
+            <li class="product">
+                <img class="product-image" src="images/shop-item-desk1.jpg" alt="Подушка">
+                <div class="product-content">
+                    <a class="product-title" href="#"><h3>Подушки на диван</h3></a>
+                    <p>Набор из двух подушек с модными принтами. Видео о создании <a class="product-content-link"
+                                                                                     href="#">здесь</a>.</p>
+                    <div class="product-buy">
+                        <div class="price">
+                            <del>1000 ₽</del>
+                            <p>800 ₽</p>
+                        </div>
+                        <a href="#" class="shop-link">В магазин</a>
                     </div>
-                </li>
-                <li class="product">
-                    <img class="product-image" src="images/shop-item-desk2.jpg" alt='Кукла "Зайчик"'>
-                    <div class="product-content">
-                        <a class="product-title" href="#"><h3>Кукла «Зайчик»</h3></a>
-                        <p>Интерьерная рукодельная кукла «Зайчик», созданию которой посвящена
-                            <a class="product-content-link" href="#">весенняя серия постов</a> в блоге и несколько
-                            подкастов.</p>
-                        <form class="product-form" action="">
-                            <div class="price">
-                                <p>3500 ₽</p>
-                            </div>
-                            <button class="shop-button" type="submit">В магазин</button>
-                        </form>
+                </div>
+            </li>
+            <li class="product">
+                <img class="product-image" src="images/shop-item-desk2.jpg" alt='Кукла "Зайчик"'>
+                <div class="product-content">
+                    <a class="product-title" href="#"><h3>Кукла «Зайчик»</h3></a>
+                    <p>Интерьерная рукодельная кукла «Зайчик», созданию которой посвящена
+                        <a class="product-content-link" href="#">весенняя серия постов</a> в блоге и несколько
+                        подкастов.</p>
+                    <div class="product-buy">
+                        <div class="price">
+                            <p>3500 ₽</p>
+                        </div>
+                        <a href="#" class="shop-link">В магазин</a>
                     </div>
-                </li>
-                <li class="product">
-                    <img class="product-image" src="images/shop-item-desk3.jpg" alt="Шестиугольная рамка">
-                    <div class="product-content">
-                        <a class="product-title" href="#"><h3>Шестиугольная рамка</h3></a>
-                        <p>Необычная рамка для украшения дома из видео
-                            <a class="product-content-link" href="#">«Как сделать рамку из подручных средств
-                                за 30 минут»</a></p>
-                        <form class="product-form" action="">
-                            <div class="price">
-                                <del>500 ₽</del>
-                                <p>400 ₽</p>
-                            </div>
-                            <button class="shop-button" type="submit">В магазин</button>
-                        </form>
+                </div>
+            </li>
+            <li class="product">
+                <img class="product-image" src="images/shop-item-desk3.jpg" alt="Шестиугольная рамка">
+                <div class="product-content">
+                    <a class="product-title" href="#"><h3>Шестиугольная рамка</h3></a>
+                    <p>Необычная рамка для украшения дома из видео
+                        <a class="product-content-link" href="#">«Как сделать рамку из подручных средств
+                            за 30 минут»</a></p>
+                    <div class="product-buy">
+                        <div class="price">
+                            <del>500 ₽</del>
+                            <p>400 ₽</p>
+                        </div>
+                        <a href="#" class="shop-link">В магазин</a>
                     </div>
-                </li>
-            </ul>
-        </section>
-    </aside>
+                </div>
+            </li>
+        </ul>
+    </section>
     <footer>
         <address>
             <ul class="container socials">
