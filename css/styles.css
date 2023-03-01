@@ -824,12 +824,12 @@ h5 {
     }
 
     .trend {
-        height: 300px;
-        width: calc((100% - 12px) / 4);
+        height: 247px;
+        width: calc((100% - 4px) / 2);
     }
 
     h3 {
-        font-size: 1.5vw;
+        font-size: 17px;
         line-height: 22px;
         text-transform: uppercase;
         margin: 6px 0 0 0;
@@ -958,14 +958,14 @@ h5 {
     }
 }
 
-@media (min-width: 641px) and (max-width: 1199px) and (orientation: portrait) {
+@media (min-width: 641px) and (max-width: 1199px) and (orientation: landscape) {
     .trend {
-        height: 247px;
-        width: calc((100% - 4px) / 2);
+        height: 300px;
+        width: calc((100% - 12px) / 4);
     }
 
     h3 {
-        font-size: 17px;
+        font-size: 1.5vw;
     }
 }
 
@@ -1038,7 +1038,7 @@ h5 {
 
     .trend {
         height: 231px;
-        width: calc((100% - 4px) / 2);
+        width: 100%;
     }
 
     h3 {
@@ -1212,9 +1212,9 @@ h5 {
     }
 }
 
-@media (max-width: 640px) and (orientation: portrait) {
+@media (max-height: 640px) and (orientation: landscape) {
     .trend {
-        width: 100%;
+        width: calc((100% - 4px) / 2);
     }
 }
 
