@@ -360,12 +360,16 @@ h5 {
     margin-left: 17px;
 }
 
+.search-form label {
+    width: 100%;
+}
+
 .search-form {
     display: flex;
 }
 
 .search-field {
-    width: 222px;
+    width: 100%;
     height: 48px;
     background-color: #f4f7f6;
     font-size: 13px;
@@ -1110,10 +1114,6 @@ h5 {
 
     .sidebar-articles-title {
         margin-left: 0;
-    }
-
-    .search-field {
-        width: 282px;
     }
 
     .mailing {
