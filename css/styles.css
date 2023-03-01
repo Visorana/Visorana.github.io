@@ -6,6 +6,7 @@ body {
     width: 1169px;
     display: flex;
     margin: 0 auto;
+    justify-content: center;
 }
 
 * {
@@ -48,26 +49,85 @@ body {
     margin-left: 3px;
 }
 
-.menu-list {
+.noemi-logo-mobile {
+    display: none;
+}
+
+nav {
     display: flex;
+}
+
+.menu-list {
+    display: none;
     font-size: 13px;
-    padding-top: 14px;
+    margin-left: 25px;
+    margin-top: 14px;
+    gap: 0 34px;
     list-style-type: none;
+}
+
+.menu-button-container {
+    display: block;
+    height: 19px;
+    width: 23px;
+    margin-top: 10px;
+    margin-left: 30px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+.menu-button,
+.menu-button::before,
+.menu-button::after {
+    display: block;
+    background-color: #fff;
+    position: absolute;
+    height: 3px;
+    width: 23px;
+}
+
+.menu-button::before {
+    content: '';
+    margin-top: 8px;
+}
+
+.menu-button::after {
+    content: '';
+    margin-top: 16px;
+}
+
+#menu-toggle:checked ~ .menu-button-container .menu-button::before {
+    margin-top: 0px;
+    transform: rotate(405deg);
+}
+
+#menu-toggle:checked ~ .menu-button-container .menu-button {
+    background: rgba(255, 255, 255, 0);
+    margin-top: 10px;
+}
+
+#menu-toggle:checked ~ .menu-button-container .menu-button::after {
+    margin-top: 0px;
+    transform: rotate(-405deg);
 }
 
 .menu-list-item {
     text-decoration: none;
     text-transform: uppercase;
     color: inherit;
-    margin-left: 34px;
 }
 
 .menu-list-item:hover {
-    text-decoration: underline
+    text-decoration: underline;
 }
 
 .header-title {
-    width: 720px;
+    width: 85%;
     margin: 0 auto;
     padding: 42px 0px;
     position: relative;
@@ -104,14 +164,17 @@ h2:after {
 }
 
 .trend-list {
+    max-width: 1812px;
     display: flex;
-    justify-content: center;
-    gap: 4px;
-    margin-top: 28px;
+    flex-wrap: wrap;
+    gap: 3px 4px;
+    margin: 28px auto 0;
     list-style-type: none;
 }
 
 .trend {
+    height: 348px;
+    width: calc((100% - 14px) / 4);
     position: relative;
 }
 
@@ -128,7 +191,7 @@ h2:after {
 }
 
 .trend-image {
-    display: block;
+    height: 100%;
     width: 100%;
     object-fit: cover;
 }
@@ -141,7 +204,7 @@ h2:after {
     z-index: 1;
     margin: 16px 22px;
     padding: 32px 33px;
-    border: 3px solid #b59f5b;
+    border: 3px solid rgba(181, 159, 91, 0.6);
 }
 
 h3 {
@@ -184,15 +247,15 @@ h3 {
     color: #b59f5b;
 }
 
-.article-list {
+.articles {
+    width: 779px;
     list-style-type: none;
-    margin-top: 63px;
 }
 
 .article {
     display: flex;
-    width: 779px;
-    margin-top: 60px;
+    flex-wrap: wrap;
+    margin-top: 61px;
 }
 
 .article-title {
@@ -237,7 +300,7 @@ h3 {
 .sidebar {
     width: 270px;
     margin-top: 54px;
-    margin-left: auto
+    margin-left: auto;
 }
 
 .sidebar-articles-title {
@@ -275,7 +338,6 @@ h4:after {
 
 .sidebar-article {
     display: flex;
-    justify-content: space-between;
     margin-top: 15px;
 }
 
@@ -294,12 +356,12 @@ h5 {
 }
 
 .sidebar-item-content {
-    width: 182px;
+    width: 100%;
+    margin-left: 17px;
 }
 
 .search-form {
     display: flex;
-    margin-bottom: 53px;
 }
 
 .search-field {
@@ -332,7 +394,7 @@ h5 {
 }
 
 .mailing {
-    margin-bottom: 51px;
+    margin-top: 53px;
 }
 
 .mailing-title {
@@ -372,11 +434,7 @@ h5 {
 }
 
 .sidebar-tags {
-    margin-bottom: 51px;
-}
-
-.sidebar-tags-title {
-    margin-left: 2px;
+    margin-top: 51px;
 }
 
 .sidebar-tag-list {
@@ -406,7 +464,7 @@ h5 {
 }
 
 .sidebar-topics {
-    margin-bottom: 51px;
+    margin-top: 51px;
 }
 
 .sidebar-topics-title {
@@ -417,14 +475,19 @@ h5 {
     list-style-type: none;
     font-size: 14px;
     font-weight: 700;
-    line-height: 47px;
+    line-height: 46px;
     margin-top: 10px;
+}
+
+.sidebar-topics-item-link {
+    color: #000;
+    text-decoration: none;
 }
 
 .sidebar-topics-item {
     position: relative;
-    color: #000;
-    text-decoration: none;
+    padding-bottom: 0;
+    border-bottom: 1px solid #eee;
 }
 
 .sidebar-topics-item:hover {
@@ -439,12 +502,13 @@ h5 {
 }
 
 .products {
-    margin: 58px auto;
+    margin: 56px auto 0;
     flex-direction: column;
 }
 
 .product-list {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     margin-top: 22px;
 }
@@ -471,8 +535,8 @@ h5 {
     position: relative;
     z-index: 1;
     flex: 1 0 auto;
-    margin-top: -32px;
-    padding: 44px 20px 24px;
+    margin-top: -38px;
+    padding: 46px 22px 24px;
     border: 3px solid rgba(181, 159, 91, 0.6);
 }
 
@@ -532,7 +596,7 @@ h5 {
     gap: 27px;
     background-color: #f4f7f6;
     list-style-type: none;
-    padding: 30px 0 30px 7px;
+    padding: 30px 0;
     margin-top: 67px;
 }
 
@@ -689,6 +753,469 @@ h5 {
 .question-field:focus {
     border: 1px solid #b59f5b;
     outline: none;
+}
+
+@media (min-width: 1200px) {
+     .menu-button-container {
+        display: none;
+    }
+
+    .menu-list {
+        display: flex;
+    }
+}
+
+@media (min-width: 641px) and (max-width: 1199px) {
+    .container {
+        width: 100%;
+        padding-left: 35px;
+        padding-right: 35px;
+    }
+
+    .noemi-logo {
+        margin-left: 0;
+    }
+
+    .noemi-svg {
+        width: 158px;
+    }
+
+    .header {
+        background-image: url('../images/banner-bg-tablet.jpg');
+        min-height: 392px;
+    }
+
+    .header-wrap {
+        padding-top: 43px;
+    }
+
+    .header-title {
+        padding-top: 32px;
+    }
+
+    h1 {
+        font-size: 40px;
+        line-height: 55px;
+    }
+
+    .menu-list {
+        flex-wrap: wrap;
+    }
+
+    #menu-toggle:checked + .menu-list {
+        display: flex;
+    }
+
+    h2 {
+        font-size: 18px;
+        line-height: 29px;
+    }
+
+    .trends {
+        margin-top: 42px;
+    }
+
+    .trend-list {
+        margin-top: 19px;
+    }
+
+    .trend {
+        height: 300px;
+        width: calc((100% - 12px) / 4);
+    }
+
+    h3 {
+        font-size: 1.5vw;
+        line-height: 22px;
+        text-transform: uppercase;
+        margin: 6px 0 0 0;
+    }
+
+    .trend-content {
+        margin: 16px 20px;
+        padding: 31px 29px 28px 29px;
+    }
+
+    .articles {
+        width: 60%;
+    }
+
+    .article {
+        margin-top: 40px;
+    }
+
+    .article:not(:last-child):after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 3px;
+        margin-top: 8px;
+        background-color: #eee;
+    }
+
+    .article:nth-child(1) {
+        margin-top: 48px;
+    }
+
+    .article-img {
+        width: 100%;
+        height: 100%;
+        min-height: 303px;
+        object-fit: cover;
+    }
+
+    .article-content {
+        margin: 12px auto 0 0;
+        padding-right: 2px;
+        width: 100%;
+    }
+
+    .article .tags {
+        margin-bottom: 11px;
+    }
+
+    .content-info {
+        margin-top: 30px;
+    }
+
+    .content-text {
+        margin-top: 25px;
+    }
+
+    .sidebar {
+        width: 40%;
+        margin-top: 40px;
+        margin-left: 35px;
+    }
+
+    .products {
+        margin-top: 50px;
+    }
+
+    .product {
+        width: 48%;
+    }
+
+    .product:nth-child(n + 3) {
+        margin-top: 29px;
+    }
+    .product picture {
+        width: 87%;
+    }
+
+    .product-image {
+        width: 100%;
+        min-height: 227px;
+        object-fit: cover;
+    }
+
+    .product-content {
+        padding: 45px 19px 22px;
+    }
+
+    .socials {
+        width: calc(100% - 70px);
+        margin-top: 53px;
+    }
+
+    .copyright {
+        margin-top: 45px;
+    }
+
+    .popup-content {
+        height: 596px;
+        top: 44.1%;
+        left: 50%;
+    }
+
+    .popup-close {
+        height: 27px;
+        width: 27px;
+        right: 1px;
+        top: -36px;
+    }
+
+    .feedback {
+        margin: 47px 30px;
+    }
+
+    .feedback-title {
+        margin-left: 1px;
+    }
+
+    .radio-choice {
+        background-size: 25px;
+        height: 25px;
+        width: 25px;
+    }
+
+    .radio-wrap {
+        gap: 35px;
+    }
+}
+
+@media (min-width: 641px) and (max-width: 1199px) and (orientation: portrait) {
+    .trend {
+        height: 247px;
+        width: calc((100% - 4px) / 2);
+    }
+
+    h3 {
+        font-size: 17px;
+    }
+}
+
+@media (max-width: 640px) {
+    .container {
+        flex-wrap: wrap;
+        width: 100%;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .header {
+        background-image: url("../images/banner-mobile.jpg");
+        min-height: 639px;
+    }
+
+    .header-wrap {
+        justify-content: flex-end;
+    }
+
+    .noemi-logo {
+        display: none;
+    }
+
+    .noemi-logo-mobile {
+        position: relative;
+        display: block;
+        margin-top: 145px;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        z-index: 1;
+    }
+
+    h1 {
+        font-size: 26px;
+        line-height: 36px;
+    }
+
+    .header-title {
+        padding-top: 16px;
+    }
+
+    .menu-button-container {
+        margin-top: 4px;
+    }
+
+    #menu-toggle:checked + .menu-list {
+        display: inline;
+        position: absolute;
+        right: 45px;
+        top: 17px;
+    }
+
+    h2 {
+        font-size: 16px;
+    }
+
+    .trends {
+        margin-top: 36px;
+    }
+
+    h2:after {
+        margin-top: 3px;
+    }
+
+    .trend-list {
+        margin-top: 25px;
+    }
+
+    .trend {
+        height: 231px;
+        width: calc((100% - 4px) / 2);
+    }
+
+    h3 {
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    .trend-content {
+        margin: 15px;
+        padding: 27px 19px;
+        padding-right: 25px;
+    }
+
+    .articles {
+        width: 100%;
+    }
+
+    .article {
+        margin-top: 34px;
+    }
+
+    .article:nth-child(1) {
+        margin-top: 44px;
+    }
+
+    .article:after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 3px;
+        margin-top: 9px;
+        background-color: #eee;
+    }
+
+    .article-img {
+        width: 100%;
+        height: 100%;
+        min-height: 253px;
+        object-fit: cover;
+        margin-left: 1px;
+
+    }
+
+    .article-content {
+        margin: 14px auto 0 0;
+        width: 100%;
+    }
+
+    .article .tags {
+        margin-bottom: 9px;
+    }
+
+    .content-info {
+        margin-top: 16px;
+    }
+
+    .content-text {
+        font-size: 14px;
+        line-height: 20px;
+        margin-top: 11px;
+        padding-right: 4px;
+    }
+
+    .sidebar {
+        width: 100%;
+        margin: 35px auto;
+    }
+
+    h4 {
+        font-size: 16px;
+        line-height: 29px;
+    }
+
+    .sidebar-articles-title {
+        margin-left: 0;
+    }
+
+    .search-field {
+        width: 282px;
+    }
+
+    .mailing {
+        margin-top: 37px;
+    }
+
+    .sidebar-tags {
+        margin-top: 36px;
+    }
+
+    .sidebar-topics {
+        margin-top: 36px;
+    }
+
+    .sidebar-topics-title {
+        margin-left: 0;
+    }
+
+    .products {
+        margin-top: 3px;
+    }
+
+    .products h2:after {
+        margin: 5px auto;
+    }
+
+    .product {
+        width: 100%;
+    }
+
+    .product:not(:last-child) {
+        margin-bottom: 24px;
+    }
+
+    .product-image {
+        width: 100%;
+        min-height: 284px;
+        object-fit: cover;
+    }
+
+    .product h3 {
+        font-size: 17px;
+        line-height: 22px;
+    }
+
+    .product-content {
+        padding: 46px 18px 25px;
+    }
+
+    .socials {
+        margin-top: 42px;
+        width: calc(100% - 30px);
+    }
+
+    .copyright {
+        margin-top: 45px;
+    }
+
+    .popup-content {
+        width: 330px;
+        height: 546px;
+        top: 27.2%;
+        left: 50%;
+    }
+
+    .popup-close {
+        height: 27px;
+        width: 27px;
+        right: 1px;
+        top: -32px;
+    }
+
+    .feedback {
+        width: calc(100% - 46px);
+        height: 100%;
+        margin: 22px 23px;
+    }
+
+    .feedback-title {
+        margin-left: 0;
+        margin-bottom: 2px;
+    }
+
+    .radio-choice {
+        background-size: 26px;
+        height: 26px;
+        width: 26px;
+    }
+
+    .radio-wrap {
+        gap: 35px;
+    }
+
+    .question-field {
+        width: 280px;
+    }
+}
+
+@media (max-width: 640px) and (orientation: portrait) {
+    .trend {
+        width: 100%;
+    }
 }
 
 @font-face {
