@@ -6,7 +6,7 @@ body {
     width: 1169px;
     display: flex;
     margin: 0 auto;
-    justify-content: center;
+    justify-content: space-between;
 }
 
 * {
@@ -127,7 +127,7 @@ nav {
 }
 
 .header-title {
-    width: 85%;
+    width: 680px;
     margin: 0 auto;
     padding: 42px 0px;
     position: relative;
@@ -164,7 +164,6 @@ h2:after {
 }
 
 .trend-list {
-    max-width: 1812px;
     display: flex;
     flex-wrap: wrap;
     gap: 3px 4px;
@@ -173,14 +172,16 @@ h2:after {
 }
 
 .trend {
-    height: 348px;
     width: calc((100% - 14px) / 4);
     position: relative;
+    min-height: 348px;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
 }
 
-.trend:before {
+.trend:after {
     content: '';
-    display: block;
     position: absolute;
     background-color: #000;
     left: 0;
@@ -188,20 +189,20 @@ h2:after {
     width: 100%;
     height: 100%;
     opacity: 0.6;
+    z-index: -1;
 }
 
 .trend-image {
-    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
     width: 100%;
+    height: 100%;
     object-fit: cover;
+    z-index: -1;
 }
 
 .trend-content {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 1;
     margin: 16px 22px;
     padding: 32px 33px;
     border: 3px solid rgba(181, 159, 91, 0.6);
@@ -272,8 +273,8 @@ h3 {
 }
 
 .article-content {
-    margin-left: auto;
-    width: 369px;
+    margin-left: 31px;
+    width: 360px;
 }
 
 .content-info {
@@ -356,7 +357,6 @@ h5 {
 }
 
 .sidebar-item-content {
-    width: 100%;
     margin-left: 17px;
 }
 
@@ -399,10 +399,6 @@ h5 {
 
 .mailing {
     margin-top: 53px;
-}
-
-.mailing-title {
-    margin-right: 4px;
 }
 
 .mailing-form {
@@ -469,10 +465,6 @@ h5 {
 
 .sidebar-topics {
     margin-top: 51px;
-}
-
-.sidebar-topics-title {
-    margin-left: 5px;
 }
 
 .sidebar-topic-list {
@@ -613,6 +605,10 @@ h5 {
     margin-left: 11px;
 }
 
+.popup-toggle {
+    display: none;
+}
+
 .popup-wrap {
     position: fixed;
     width: 100%;
@@ -626,10 +622,9 @@ h5 {
 
 .popup-content {
     width: 390px;
-    height: 590px;
     position: relative;
     background: #fff;
-    top: 41.5%;
+    top: 50%;
     left: 50%;
     transform:translate(-50%, -50%);
 }
@@ -652,11 +647,7 @@ h5 {
     display: flex;
     flex-direction: column;
     font-size: 13px;
-    margin: 46px 30px;
-}
-
-.feedback-title {
-    margin-left: 7px;
+    padding: 55px 30px;
 }
 
 .question {
@@ -794,6 +785,7 @@ h5 {
     }
 
     .header-title {
+        width: 605px;
         padding-top: 32px;
     }
 
@@ -831,8 +823,6 @@ h5 {
     h3 {
         font-size: 17px;
         line-height: 22px;
-        text-transform: uppercase;
-        margin: 6px 0 0 0;
     }
 
     .trend-content {
@@ -841,7 +831,7 @@ h5 {
     }
 
     .articles {
-        width: 60%;
+        margin-right: 35px;
     }
 
     .article {
@@ -849,9 +839,9 @@ h5 {
     }
 
     .article:not(:last-child):after {
+        width: 100%;
         content: "";
         display: block;
-        width: 100%;
         height: 3px;
         margin-top: 8px;
         background-color: #eee;
@@ -864,14 +854,13 @@ h5 {
     .article-img {
         width: 100%;
         height: 100%;
-        min-height: 303px;
         object-fit: cover;
     }
 
     .article-content {
+        width: 100%;
         margin: 12px auto 0 0;
         padding-right: 2px;
-        width: 100%;
     }
 
     .article .tags {
@@ -887,9 +876,9 @@ h5 {
     }
 
     .sidebar {
-        width: 40%;
+        flex: 1 0 auto;
+        width: 305px;
         margin-top: 40px;
-        margin-left: 35px;
     }
 
     .products {
@@ -926,25 +915,11 @@ h5 {
         margin-top: 45px;
     }
 
-    .popup-content {
-        height: 596px;
-        top: 44.1%;
-        left: 50%;
-    }
-
     .popup-close {
         height: 27px;
         width: 27px;
         right: 1px;
         top: -36px;
-    }
-
-    .feedback {
-        margin: 47px 30px;
-    }
-
-    .feedback-title {
-        margin-left: 1px;
     }
 
     .radio-choice {
@@ -1006,6 +981,7 @@ h5 {
     }
 
     .header-title {
+        width: 280px;
         padding-top: 16px;
     }
 
@@ -1078,7 +1054,6 @@ h5 {
         height: 100%;
         min-height: 253px;
         object-fit: cover;
-        margin-left: 1px;
 
     }
 
@@ -1128,10 +1103,6 @@ h5 {
         margin-top: 36px;
     }
 
-    .sidebar-topics-title {
-        margin-left: 0;
-    }
-
     .products {
         margin-top: 3px;
     }
@@ -1174,9 +1145,6 @@ h5 {
 
     .popup-content {
         width: 330px;
-        height: 546px;
-        top: 27.2%;
-        left: 50%;
     }
 
     .popup-close {
@@ -1186,14 +1154,15 @@ h5 {
         top: -32px;
     }
 
+    .popup-content {
+        width: 330px;
+    }
+
     .feedback {
-        width: calc(100% - 46px);
-        height: 100%;
-        margin: 22px 23px;
+        padding: 30px 27px 30px 25px;
     }
 
     .feedback-title {
-        margin-left: 0;
         margin-bottom: 2px;
     }
 
